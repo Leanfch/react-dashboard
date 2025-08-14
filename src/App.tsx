@@ -1,4 +1,3 @@
-import './App.css'
 import InflationChart from './components/charts/InflationChart'
 import YearlyInflationChart from './components/charts/YearlyInflationChart'
 import MetricCard from './components/ui/MetricCard'
