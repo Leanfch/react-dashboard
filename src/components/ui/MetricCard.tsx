@@ -13,16 +13,16 @@ export default function MetricCard({ title, value, subtitle, color = 'blue' }: M
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-solid" 
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-solid transition-colors duration-200" 
          style={{ borderLeftColor: color === 'red' ? '#ef4444' : color === 'green' ? '#10b981' : '#3b82f6' }}>
-      <h3 className="text-sm font-medium text-gray-500 uppercase tracking-wide">
+      <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
         {title}
       </h3>
       <p className={`text-2xl font-bold mt-2 ${colorClasses[color]}`}>
         {value}
       </p>
       {subtitle && (
-        <p className="text-sm text-gray-400 mt-1">
+        <p className="text-sm text-gray-400 dark:text-gray-500 mt-1">
           {subtitle}
         </p>
       )}
