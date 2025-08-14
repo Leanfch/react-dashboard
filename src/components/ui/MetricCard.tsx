@@ -13,7 +13,7 @@ export default function MetricCard({ title, value, subtitle, color = 'blue' }: M
   };
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-l-4 border-solid transition-colors duration-200" 
+    <div className="bg-white dark:bg-zinc-700 rounded-lg shadow-md p-6 border-l-4 border-solid transition-colors duration-200" 
          style={{ borderLeftColor: color === 'red' ? '#ef4444' : color === 'green' ? '#10b981' : '#3b82f6' }}>
       <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
         {title}

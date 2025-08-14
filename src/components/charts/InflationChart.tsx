@@ -7,7 +7,7 @@ interface InflationChartProps {
 
 export default function InflationChart({ data, title }: InflationChartProps) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 transition-colors duration-200">
+    <div className="bg-white dark:bg-zinc-700 rounded-lg shadow-md p-6 transition-colors duration-200">
       <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-4">
         {title}
       </h3>
