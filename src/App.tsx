@@ -1,7 +1,8 @@
 import './App.css'
 import InflationChart from './components/charts/InflationChart'
+import YearlyInflationChart from './components/charts/YearlyInflationChart'
 import MetricCard from './components/ui/MetricCard'
-import { monthlyInflationData } from './data/InflationData'
+import { monthlyInflationData, yearlyInflationData } from './data/InflationData'
 
 function App() {
   return (
@@ -33,10 +34,19 @@ function App() {
           />
         </div>
         
-         <InflationChart 
-          data={monthlyInflationData}
-          title="Evolución Inflación Mensual 2023-2024"
-        />
+         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <InflationChart 
+            data={monthlyInflationData}
+            title="Evolución Mensual 2023-2024"
+          />
+          
+          <YearlyInflationChart 
+            data={yearlyInflationData}
+            title="Inflación Anual Histórica"
+          />
+        </div>
+
+
       </div>
     </div>
   )
