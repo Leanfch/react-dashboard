@@ -1,5 +1,7 @@
 import './App.css'
+import InflationChart from './components/charts/InflationChart'
 import MetricCard from './components/ui/MetricCard'
+import { monthlyInflationData } from './data/InflationData'
 
 function App() {
   return (
@@ -31,14 +33,10 @@ function App() {
           />
         </div>
         
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-xl font-semibold text-gray-700 mb-4">
-            Gráficos de Evolución
-          </h2>
-          <p className="text-gray-600">
-            Aquí van los gráficos con Recharts...
-          </p>
-        </div>
+         <InflationChart 
+          data={monthlyInflationData}
+          title="Evolución Inflación Mensual 2023-2024"
+        />
       </div>
     </div>
   )
