@@ -1,12 +1,8 @@
 import MetricCard from "./components/ui/MetricCard";
 import DarkModeToggle from "./components/ui/DarkModeToggle";
-import InflationChart from "./components/charts/InflationChart";
-import YearlyInflationChart from "./components/charts/YearlyInflationChart";
-import {
-	monthlyInflationData,
-	yearlyInflationData,
-} from "./data/InflationData.ts";
 import FooterUi from "./components/ui/FooterUi.tsx";
+import InflationChartFromAPI from "./components/charts/InflationChartAPI.tsx";
+import MonthlyInflationChartAPI from "./components/charts/MonthlyInflationChartAPI.tsx";
 
 function App() {
 	return (
@@ -44,16 +40,10 @@ function App() {
 				</section>
 
 				{/* Gráficos */}
-				<section className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-7xl mx-auto">
-					<InflationChart
-						data={monthlyInflationData}
-						title="Evolución Mensual 2023-2024"
-					/>
+				<section className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-7xl mx-auto">
+                    <InflationChartFromAPI />
 
-					<YearlyInflationChart
-						data={yearlyInflationData}
-						title="Inflación Anual Histórica"
-					/>
+                    <MonthlyInflationChartAPI />
 				</section>
 				<FooterUi />
 			</section>
